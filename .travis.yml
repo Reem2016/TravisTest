@@ -11,11 +11,11 @@ install:
 
 script:
   - cd tests
-  #- ansible-playbook -i inventory playbook.yml --syntax-check
-  #- ansible-playbook -i inventory playbook.yml --sudo -vvvv
   - sudo chmod a-x inventory
-  - ansible-playbook -i inventory playbook.yml --sudo
-  #- >
+  - ansible-playbook -i inventory playbook.yml --syntax-check
+  - ansible-playbook -i inventory playbook.yml --sudo -vvvv
+  
+   #- >
     #ansible-playbook -i inventory playbook.yml --sudo
     #| grep -q 'changed=0.*unreachable=0.*failed=0'
     #&& (echo 'Idempotence test: pass' && exit 0)
