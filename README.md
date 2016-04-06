@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Ansible Role: Apache 2.x
 
 [![Build Status](https://travis-ci.org/geerlingguy/ansible-role-apache.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-apache)
@@ -121,3 +122,6 @@ MIT / BSD
 ## Author Information
 
 This role was created in 2014 by [Jeff Geerling](http://jeffgeerling.com/), author of [Ansible for DevOps](http://ansiblefordevops.com/).
+=======
+# TravisTest
+>>>>>>> c31d35823e012337ff5ed461c1a7773e1f70e8b0
