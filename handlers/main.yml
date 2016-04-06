@@ -1,4 +1,5 @@
 ---
+# Restart HTTP
 - name: restart apache
   service:
     name: "{{ apache_service }}"
