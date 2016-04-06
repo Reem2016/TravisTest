@@ -1,20 +1,30 @@
 ---
-apache_service: httpd
-apache_daemon: httpd
-apache_daemon_path: /usr/sbin/
-apache_server_root: /etc/httpd
-apache_conf_path: /etc/httpd/conf.d
+__php_packages:
+  - php
+  - php-cli
+  - php-common
+  - php-devel
+  - php-fpm
+  - php-gd
+  - php-imap
+  - php-ldap
+  - php-mbstring
+  - php-opcache
+  - php-pdo
+  - php-pear
+  - php-pecl-apc
+  - php-xml
+  - php-xmlrpc
+__php_webserver_daemon: "httpd"
 
-apache_vhosts_version: "2.2"
+__php_conf_paths:
+  - /etc
 
-__apache_packages:
-  - httpd
-  - httpd-devel
-  - mod_ssl
-  - openssh
+__php_extension_conf_paths:
+  - /etc/php.d
 
-apache_ports_configuration_items:
-  - regexp: "^Listen "
-    line: "Listen {{ apache_listen_port }}"
-  - regexp: "^#?NameVirtualHost "
-    line: "NameVirtualHost *:{{ apache_listen_port }}"
+__php_apc_conf_filename: 50-apc.ini
+__php_opcache_conf_filename: 10-opcache.ini
+__php_fpm_daemon: php-fpm
+__php_fpm_conf_path: "/etc/fpm"
+__php_fpm_pool_conf_path: "/etc/php-fpm.d/www.conf"

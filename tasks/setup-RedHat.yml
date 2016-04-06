@@ -1,7 +1,8 @@
 ---
-- name: Ensure Apache is installed on RHEL.
+- name: Ensure PHP packages are installed.
   yum:
     name: "{{ item }}"
     state: installed
-    enablerepo: "{{ apache_enablerepo }}"
-  with_items: "{{ apache_packages }}"
+    enablerepo: "{{ php_enablerepo }}"
+  with_items: "{{ php_packages }}"
+  notify: restart webserver
