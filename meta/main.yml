@@ -1,23 +1,17 @@
 ---
-dependencies: []
 
 galaxy_info:
-  author: geerlingguy
-  description: PHP for RedHat/CentOS/Debian/Ubuntu.
-  company: "Midwestern Mac, LLC"
-  license: "license (BSD, MIT)"
-  min_ansible_version: 1.9
+  author: kosssi
+  description: Install and Configure Apache
+  license: license MIT
+  min_ansible_version: 1.4
   platforms:
-  - name: EL
-    versions:
-    - 6
-    - 7
-  - name: Debian
-    versions:
-    - all
   - name: Ubuntu
     versions:
     - all
-  galaxy_tags:
-    - development
+  - name: Debian
+    versions:
+    - all
+  categories:
     - web
+dependencies: []
